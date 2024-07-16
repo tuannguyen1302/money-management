@@ -1,8 +1,8 @@
 
 import 'package:go_router/go_router.dart';
-import 'package:money_management/constants/router.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
+import '../../constants/router.dart';
 import '../../presentation/features/home/home_screen.dart';
 part 'go_router_provider.g.dart';
 

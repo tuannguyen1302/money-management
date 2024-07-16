@@ -1,8 +1,7 @@
 import 'dart:ui';
-
 import 'package:flutter/scheduler.dart';
-import 'package:money_management/presentation/features/settings/models/app_language.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../../../../presentation/features/settings/models/app_language.dart';
 
 class SharedPreferencesClient {
   SharedPreferencesClient(this._sharedPreferences);

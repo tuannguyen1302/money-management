@@ -1,10 +1,10 @@
-
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:money_management/constants/resources/app_themes.dart';
-import 'package:money_management/data/provider/app_theme_provider.dart';
-import 'package:money_management/data/provider/go_router_provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../constants/resources/app_themes.dart';
+import '../data/provider/app_theme_provider.dart';
+import '../data/provider/go_router_provider.dart';
+
 
 class App extends ConsumerStatefulWidget {
   const App({super.key});
