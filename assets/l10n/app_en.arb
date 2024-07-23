@@ -28,5 +28,65 @@
   "@language": {
     "type": "text",
     "placeholders": {}
+  },
+  "expense": "Expense",
+  "@expense": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "income": "Income",
+  "@income": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "date": "Date",
+  "@date": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "note": "Note",
+  "@note": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "amount": "Amount",
+  "@amount": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "category": "Category",
+  "@category": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "type": "Type",
+  "@type": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "save": "Save",
+  "@save": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "notePlaceholder": "Enter value",
+  "@notePlaceholder": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "inputComplete": "Data has been saved!",
+  "@inputComplete": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "vietnamese": "Vietnamese",
+  "@vietnamese": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "english": "English",
+  "@english": {
+    "type": "text",
+    "placeholders": {}
   }
 }

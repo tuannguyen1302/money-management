@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+
 import '../constants/resources/app_themes.dart';
 import '../data/provider/app_theme_provider.dart';
 import '../data/provider/go_router_provider.dart';
@@ -29,3 +30,4 @@ class _AppState extends ConsumerState<App> {
     );
   }
 }
+
