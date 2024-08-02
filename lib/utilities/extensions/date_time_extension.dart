@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 
-import '../../data/models/db/db_category.dart';
 import '../../data/provider/app_language_provider.dart';
 import 'string_extension.dart';
 

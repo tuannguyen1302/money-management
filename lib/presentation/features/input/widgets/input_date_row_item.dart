@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../../constants/constants.dart';
 import '../../../../utilities/extensions/date_time_extension.dart';
 import '../../../../utilities/extensions/widget_ref_extension.dart';
 import '../input_view_model.dart';
@@ -62,7 +63,10 @@ class InputDateRowItem extends ConsumerWidget {
                   ),
                   child: Center(
                     child: Text(
-                      date?.toDateString() ?? '',
+                      date?.toDateString(
+                        format: Constants.dayFormat,
+                        ref: ref,
+                      ) ?? '',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: ref.colors.mainText,

@@ -31,7 +31,7 @@ class InputViewModel extends _$InputViewModel {
     final date = state.value?.date ?? DateTime.now();
     update(
           (state) => state.copyWith(
-        date: date.toNextDate(),
+        date: date.nextDate,
       ),
     );
   }
@@ -40,7 +40,7 @@ class InputViewModel extends _$InputViewModel {
     final date = state.value?.date ?? DateTime.now();
     update(
           (state) => state.copyWith(
-        date: date.toPreviousDate(),
+        date: date.previousDate,
       ),
     );
   }

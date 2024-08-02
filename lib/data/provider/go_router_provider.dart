@@ -26,7 +26,7 @@ GoRouter goRouter(GoRouterRef ref) {
                 barrierDismissible: false,
               );
             },
-          )
+          ),
         ],
       ),
     ],
