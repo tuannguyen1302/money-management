@@ -2,6 +2,7 @@ import '../data_sources/local/db/db_client.dart';
 import '../models/category_type.dart';
 import '../models/db/db_category.dart';
 import '../models/db/db_record.dart';
+import '../models/db/db_record_view.dart';
 
 abstract class DbRepository {
   Future<int?> insertDbRecord({
@@ -18,6 +19,11 @@ abstract class DbRepository {
 
   Future<void> insertDbCategories({
     required List<DbCategory> dbCategories,
+  });
+
+  Future<List<DbRecordView>> getDbRecords({
+    required DateTime startDate,
+    required DateTime endDate,
   });
 }
 
@@ -53,5 +59,17 @@ class DbRepositoryImpl implements DbRepository {
   @override
   Future<void> insertDbCategories({required List<DbCategory> dbCategories}) {
     return _dbClient.insertCategories(dbCategories: dbCategories);
+  }
+
+  @override
+  Future<List<DbRecordView>> getDbRecords({
+    required DateTime startDate,
+    required DateTime endDate,
+  }) async {
+    final maps = await _dbClient.getDbRecords(
+      startDate: startDate,
+      endDate: endDate,
+    );
+    return maps.map((map) => DbRecordView.fromJson(map)).toList();
   }
 }

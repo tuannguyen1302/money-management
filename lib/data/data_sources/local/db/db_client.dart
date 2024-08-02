@@ -155,4 +155,43 @@ class DbClient {
       return null;
     }
   }
+
+  Future<List<Map<String, dynamic>>> getDbRecords({
+    required DateTime startDate,
+    required DateTime endDate,
+  }) async {
+    const sqlQuery = '''
+      SELECT ${DbTableName.record}.${DbRecordTableField.categoryId} AS ${DbRecordViewField.categoryId}, 
+        ${DbTableName.record}.${DbRecordTableField.createdAt} AS ${DbRecordViewField.createdAt}, 
+        ${DbTableName.record}.${DbRecordTableField.date} AS ${DbRecordViewField.date}, 
+        ${DbTableName.record}.${DbRecordTableField.amount} AS ${DbRecordViewField.amount}, 
+        ${DbTableName.record}.${DbRecordTableField.id} AS ${DbRecordViewField.id}, 
+        ${DbTableName.record}.${DbRecordTableField.updateAt} AS ${DbRecordViewField.updatedAt}, 
+        ${DbTableName.record}.${DbRecordTableField.note} AS ${DbRecordViewField.note}, 
+        ${DbTableName.category}.${DbCategoryTableField.enName} AS ${DbRecordViewField.categoryEnName}, 
+        ${DbTableName.category}.${DbCategoryTableField.viName} AS ${DbRecordViewField.categoryViName}, 
+        ${DbTableName.category}.${DbCategoryTableField.code} AS ${DbRecordViewField.categoryCode}, 
+        ${DbTableName.category}.${DbCategoryTableField.icon} AS ${DbRecordViewField.categoryIcon}, 
+        ${DbTableName.category}.${DbCategoryTableField.color} AS ${DbRecordViewField.categoryColor}, 
+        ${DbTableName.category}.${DbCategoryTableField.type} AS ${DbRecordViewField.categoryType}, 
+        ${DbTableName.category}.${DbCategoryTableField.createdAt} AS ${DbRecordViewField.categoryCreatedAt}, 
+        ${DbTableName.category}.${DbCategoryTableField.updateAt} AS ${DbRecordViewField.categoryUpdatedAt}
+      FROM ${DbTableName.record}
+      INNER JOIN ${DbTableName.category} 
+        ON ${DbTableName.record}.${DbRecordTableField.categoryId} = ${DbTableName.category}.${DbCategoryTableField.id}
+      WHERE ${DbTableName.record}.${DbRecordTableField.date} >= ? 
+        AND ${DbTableName.record}.${DbRecordTableField.date} <= ?
+    ''';
+
+    return (await database).rawQuery(
+      sqlQuery,
+      [
+        startDate.millisecondsSinceEpoch,
+        endDate.millisecondsSinceEpoch,
+      ],
+    );
+  }
+
+
+
 }

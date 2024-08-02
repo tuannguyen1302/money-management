@@ -6,4 +6,9 @@ class Constants {
   static String amountThousandSeparator = ',';
 
   static String baseUrl = 'https://ongchaulaptrinh.github.io/';
+
+  static String dayFormat = 'd MMM, yyyy (EEE)';
+  static String monthFormat = 'MMMM, yyyy';
+
+  static String moneyUnit = '₫';
 }

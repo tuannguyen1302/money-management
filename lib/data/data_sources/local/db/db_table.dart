@@ -30,3 +30,24 @@ class DbCategoryTableField {
   static const updateAt = 'updateAt';
 
 }
+
+class DbRecordViewField {
+  DbRecordViewField._();
+
+  static const id = 'id';
+  static const date = 'date';
+  static const note = 'note';
+  static const amount = 'amount';
+  static const categoryId = 'category_id';
+  static const createdAt = 'created_at';
+  static const updatedAt = 'updated_at';
+
+  static const categoryEnName = 'category_en_name';
+  static const categoryViName = 'category_vi_name';
+  static const categoryCode = 'category_ode';
+  static const categoryIcon = 'category_icon';
+  static const categoryColor = 'category_color';
+  static const categoryType = 'category_type';
+  static const categoryCreatedAt = 'category_created_at';
+  static const categoryUpdatedAt = 'category_updated_at';
+}
