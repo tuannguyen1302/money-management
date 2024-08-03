@@ -45,6 +45,7 @@ class InputViewModel extends _$InputViewModel {
     );
   }
 
+
   Future<void> getCategories() async {
     final categoryType = state.value?.categoryType;
     final categories = await ref.read(dbRepositoryProvider).getDbCategories(

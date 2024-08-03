@@ -1,6 +1,7 @@
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:flutter/material.dart';
+
 import '../../constants/router.dart';
 import '../../presentation/features/home/home_screen.dart';
 import '../../presentation/features/input/widgets/input_complete_screen.dart';

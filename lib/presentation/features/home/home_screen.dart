@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:riverpod/riverpod.dart';
 import '../../../utilities/extensions/widget_ref_extension.dart';
 import '../../common_widgets/base/base_screen.dart';
+import '../calendar/calendar_screen.dart';
 import '../input/input_screen.dart';
 import '../settings/setting_screen.dart';
 import 'home_state.dart';
@@ -30,7 +31,7 @@ class _HomeScreenState
     if (selectedTapIndex == HomeTap.input.index) {
       return const InputScreen();
     } else if (selectedTapIndex == HomeTap.calendar.index) {
-      return const SizedBox();
+      return const CalendarScreen();
     } else if (selectedTapIndex == HomeTap.report.index) {
       return const SizedBox();
     } else if (selectedTapIndex == HomeTap.setting.index) {

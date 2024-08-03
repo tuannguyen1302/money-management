@@ -1,3 +1,5 @@
+
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../utilities/extensions/widget_ref_extension.dart';
@@ -14,6 +16,14 @@ extension CategoryTypeExtension on CategoryType {
         return ref.appLocalizations.expense;
       case CategoryType.income:
         return ref.appLocalizations.income;
+    }
+  }
+  Color getTitleColor() {
+    switch (this) {
+      case CategoryType.expense:
+        return Colors.red;
+      case CategoryType.income:
+        return Colors.blue;
     }
   }
 }

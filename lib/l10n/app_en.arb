@@ -1,91 +1,131 @@
 {
-  "input": "Nhập",
+  "input": "Input",
   "@input": {
     "type": "text",
     "placeholders": {}
   },
-  "calendar": "Lịch",
+  "calendar": "Calendar",
   "@calendar": {
     "type": "text",
     "placeholders": {}
   },
-  "report": "Báo cáo",
+  "report": "Report",
   "@report": {
     "type": "text",
     "placeholders": {}
   },
-  "setting": "Cài đặt",
+  "setting": "Setting",
   "@setting": {
     "type": "text",
     "placeholders": {}
   },
-  "darkAppearance": "Chế độ tối",
+  "darkAppearance": "Dark Appearance",
   "@darkAppearance": {
     "type": "text",
     "placeholders": {}
   },
-  "language": "Ngôn ngữ",
+  "language": "Language",
   "@language": {
     "type": "text",
     "placeholders": {}
   },
-  "expense": "Khoản chi",
+  "expense": "Expense",
   "@expense": {
     "type": "text",
     "placeholders": {}
   },
-  "income": "Khoản thu",
+  "income": "Income",
   "@income": {
     "type": "text",
     "placeholders": {}
   },
-  "date": "Ngày",
+  "date": "Date",
   "@date": {
     "type": "text",
     "placeholders": {}
   },
-  "note": "Ghi chú",
+  "note": "Note",
   "@note": {
     "type": "text",
     "placeholders": {}
   },
-  "amount": "Số tiền",
+  "amount": "Amount",
   "@amount": {
     "type": "text",
     "placeholders": {}
   },
-  "category": "Danh mục",
+  "category": "Category",
   "@category": {
     "type": "text",
     "placeholders": {}
   },
-  "type": "Phân loại",
+  "type": "Type",
   "@type": {
     "type": "text",
     "placeholders": {}
   },
-  "save": "Lưu",
+  "save": "Save",
   "@save": {
     "type": "text",
     "placeholders": {}
   },
-  "notePlaceholder": "Nhập ghi chú",
+  "notePlaceholder": "Enter value",
   "@notePlaceholder": {
     "type": "text",
     "placeholders": {}
   },
-  "inputComplete": "Dữ liệu đã được lưu!",
+  "inputComplete": "Data has been saved!",
   "@inputComplete": {
     "type": "text",
     "placeholders": {}
   },
-  "vietnamese": "Tiếng Việt",
+  "vietnamese": "Vietnamese",
   "@vietnamese": {
     "type": "text",
     "placeholders": {}
   },
-  "english": "Tiếng Anh",
+  "english": "English",
   "@english": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "mon": "MON",
+  "@mon": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "tue": "TUE",
+  "@tue": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "wed": "WED",
+  "@wed": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "thu": "THU",
+  "@thu": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "fri": "FRI",
+  "@fri": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "sat": "SAT",
+  "@sat": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "sun": "SUN",
+  "@sun": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "total": "Total",
+  "@total": {
     "type": "text",
     "placeholders": {}
   }
