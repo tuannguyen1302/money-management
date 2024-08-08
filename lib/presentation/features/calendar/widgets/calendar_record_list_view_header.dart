@@ -6,7 +6,6 @@ import '../../../../utilities/extensions/date_time_extension.dart';
 import '../../../../utilities/extensions/int_extension.dart';
 import '../../../../utilities/extensions/widget_ref_extension.dart';
 import '../calendar_view_model.dart';
-import 'calendar_date_row_item.dart';
 
 class CalendarRecordListViewHeader extends ConsumerWidget {
   const CalendarRecordListViewHeader({required this.date, super.key});

@@ -2,19 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../data/models/category_type.dart';
-import '../../../../data/models/db/db_record_view.dart';
+import '../../../../data/models/db/db_category.dart';
 import '../../../../utilities/extensions/color_extension.dart';
 import '../../../../utilities/extensions/int_extension.dart';
+import '../../../../utilities/extensions/num_extension.dart';
 import '../../../../utilities/extensions/widget_ref_extension.dart';
+import '../models/chart_data.dart';
 
-class CalendarRecordListViewItem extends ConsumerWidget {
-  const CalendarRecordListViewItem({
-    required this.dbRecordView,
+class ReportChartCategoryListItem extends ConsumerWidget {
+  const ReportChartCategoryListItem({
+    required this.chartData,
     super.key,
   });
 
-  final DbRecordView dbRecordView;
+  final ChartData chartData;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -30,11 +31,11 @@ class CalendarRecordListViewItem extends ConsumerWidget {
                 width: 16,
               ),
               SvgPicture.network(
-                dbRecordView.iconUrl,
+                chartData.dbCategory.iconUrl,
                 width: 24,
                 height: 24,
                 colorFilter: ColorFilter.mode(
-                  HexColor.fromHex(dbRecordView.categoryColor),
+                  HexColor.fromHex(chartData.dbCategory.color),
                   BlendMode.srcIn,
                 ),
               ),
@@ -42,7 +43,7 @@ class CalendarRecordListViewItem extends ConsumerWidget {
                 width: 8,
               ),
               Text(
-                dbRecordView.getName(ref),
+                chartData.dbCategory.getName(ref),
                 style: TextStyle(
                   color: ref.colors.mainText,
                   fontSize: 16,
@@ -55,28 +56,30 @@ class CalendarRecordListViewItem extends ConsumerWidget {
               ),
               Expanded(
                 child: Text(
-                  (dbRecordView.note?.isNotEmpty ?? false)
-                      ? '(${dbRecordView.note})'
-                      : '',
+                  chartData.totalAmount.toThousandFormatAmount(withUnit: true),
                   style: TextStyle(
                     color: ref.colors.mainText,
-                    fontSize: 12,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
                   ),
-                  maxLines: 2,
                   overflow: TextOverflow.ellipsis,
+                  textAlign: TextAlign.right,
                 ),
               ),
               const SizedBox(
                 width: 4,
               ),
-              Text(
-                dbRecordView.amount.toThousandFormatAmount(withUnit: true),
-                style: TextStyle(
-                  color: dbRecordView.getCategoryType().getTitleColor(),
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
+              SizedBox(
+                width: 48,
+                child: Text(
+                  chartData.percent.toPercent(),
+                  style: TextStyle(
+                    color: ref.colors.mainText,
+                    fontSize: 12,
+                  ),
+                  overflow: TextOverflow.ellipsis,
+                  textAlign: TextAlign.right,
                 ),
-                overflow: TextOverflow.ellipsis,
               ),
               SizedBox(
                 width: 48,
@@ -97,4 +100,3 @@ class CalendarRecordListViewItem extends ConsumerWidget {
     );
   }
 }
-

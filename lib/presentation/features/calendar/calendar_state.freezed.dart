@@ -26,9 +26,7 @@ mixin _$CalendarState {
   List<DbRecordView>? get dbRecordViewList =>
       throw _privateConstructorUsedError;
 
-  /// Create a copy of CalendarState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $CalendarStateCopyWith<CalendarState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -58,8 +56,6 @@ class _$CalendarStateCopyWithImpl<$Res, $Val extends CalendarState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of CalendarState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -124,8 +120,6 @@ class __$$CalendarStateImplCopyWithImpl<$Res>
       _$CalendarStateImpl _value, $Res Function(_$CalendarStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CalendarState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -257,9 +251,7 @@ class _$CalendarStateImpl implements _CalendarState {
       const DeepCollectionEquality().hash(_dbRecordViewMap),
       const DeepCollectionEquality().hash(_dbRecordViewList));
 
-  /// Create a copy of CalendarState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$CalendarStateImplCopyWith<_$CalendarStateImpl> get copyWith =>
@@ -287,11 +279,8 @@ abstract class _CalendarState implements CalendarState {
   Map<DateTime, List<DbRecordView>>? get dbRecordViewMap;
   @override
   List<DbRecordView>? get dbRecordViewList;
-
-  /// Create a copy of CalendarState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$CalendarStateImplCopyWith<_$CalendarStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

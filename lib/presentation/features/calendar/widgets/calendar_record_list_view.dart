@@ -16,7 +16,6 @@ class CalendarRecordListView extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final dbRecordViewList =
         ref.watch(calendarViewModelProvider).value?.dbRecordViewList ?? [];
-
     return GroupedListView<DbRecordView, DateTime>(
       elements: dbRecordViewList,
       groupBy: (dbRecordView) =>

@@ -33,12 +33,8 @@ mixin _$ApiCategory {
   @JsonKey(name: 'type')
   int get type => throw _privateConstructorUsedError;
 
-  /// Serializes this ApiCategory to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of ApiCategory
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ApiCategoryCopyWith<ApiCategory> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -68,8 +64,6 @@ class _$ApiCategoryCopyWithImpl<$Res, $Val extends ApiCategory>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ApiCategory
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -134,8 +128,6 @@ class __$$ApiCategoryImplCopyWithImpl<$Res>
       _$ApiCategoryImpl _value, $Res Function(_$ApiCategoryImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ApiCategory
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -226,14 +218,12 @@ class _$ApiCategoryImpl implements _ApiCategory {
             (identical(other.type, type) || other.type == type));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, enName, viName, code, icon, color, type);
 
-  /// Create a copy of ApiCategory
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ApiCategoryImplCopyWith<_$ApiCategoryImpl> get copyWith =>
@@ -277,11 +267,8 @@ abstract class _ApiCategory implements ApiCategory {
   @override
   @JsonKey(name: 'type')
   int get type;
-
-  /// Create a copy of ApiCategory
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ApiCategoryImplCopyWith<_$ApiCategoryImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

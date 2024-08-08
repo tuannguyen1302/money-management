@@ -39,12 +39,8 @@ mixin _$DbCategory {
   @JsonKey(name: DbCategoryTableField.updateAt)
   int? get updatedAt => throw _privateConstructorUsedError;
 
-  /// Serializes this DbCategory to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of DbCategory
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $DbCategoryCopyWith<DbCategory> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -77,8 +73,6 @@ class _$DbCategoryCopyWithImpl<$Res, $Val extends DbCategory>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of DbCategory
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -161,8 +155,6 @@ class __$$DbCategoryImplCopyWithImpl<$Res>
       _$DbCategoryImpl _value, $Res Function(_$DbCategoryImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of DbCategory
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -285,14 +277,12 @@ class _$DbCategoryImpl implements _DbCategory {
                 other.updatedAt == updatedAt));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, enName, viName, code, icon,
       color, type, createdAt, id, updatedAt);
 
-  /// Create a copy of DbCategory
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DbCategoryImplCopyWith<_$DbCategoryImpl> get copyWith =>
@@ -350,11 +340,8 @@ abstract class _DbCategory implements DbCategory {
   @override
   @JsonKey(name: DbCategoryTableField.updateAt)
   int? get updatedAt;
-
-  /// Create a copy of DbCategory
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DbCategoryImplCopyWith<_$DbCategoryImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

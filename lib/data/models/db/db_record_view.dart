@@ -9,6 +9,7 @@ import '../../data_sources/local/db/db_table.dart';
 import '../../provider/app_language_provider.dart';
 import '../category_type.dart';
 import 'db_base_model.dart';
+import 'db_category.dart';
 
 part 'db_record_view.freezed.dart';
 
@@ -43,6 +44,19 @@ class DbRecordView extends DbBaseModel with _$DbRecordView {
 }
 
 extension DbRecordViewExtension on DbRecordView {
+  DbCategory get dbCategory {
+    return DbCategory(
+      enName: categoryEnName,
+      viName: categoryViName,
+      code: categoryCode,
+      icon: categoryIcon,
+      color: categoryColor,
+      type: categoryType,
+      createdAt: categoryCreatedAt,
+      updatedAt: categoryUpdatedAt,
+    );
+  }
+
   String getName(WidgetRef ref) {
     final appSupportedLanguage =
         ref.watch(appLanguageProvider).appSupportedLanguage;

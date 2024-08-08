@@ -25,8 +25,8 @@ class _AppState extends ConsumerState<App> {
       theme: AppThemes.appTheme(isDarkTheme),
       darkTheme: AppThemes.appTheme(isDarkTheme),
       routerConfig: ref.read(goRouterProvider),
-      localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
     );
   }
 }

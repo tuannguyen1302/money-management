@@ -51,12 +51,8 @@ mixin _$DbRecordView {
   @JsonKey(name: DbRecordViewField.categoryUpdatedAt)
   int? get categoryUpdatedAt => throw _privateConstructorUsedError;
 
-  /// Serializes this DbRecordView to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of DbRecordView
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $DbRecordViewCopyWith<DbRecordView> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -96,8 +92,6 @@ class _$DbRecordViewCopyWithImpl<$Res, $Val extends DbRecordView>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of DbRecordView
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -217,8 +211,6 @@ class __$$DbRecordViewImplCopyWithImpl<$Res>
       _$DbRecordViewImpl _value, $Res Function(_$DbRecordViewImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of DbRecordView
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -415,7 +407,7 @@ class _$DbRecordViewImpl implements _DbRecordView {
                 other.categoryUpdatedAt == categoryUpdatedAt));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -435,9 +427,7 @@ class _$DbRecordViewImpl implements _DbRecordView {
       updatedAt,
       categoryUpdatedAt);
 
-  /// Create a copy of DbRecordView
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DbRecordViewImplCopyWith<_$DbRecordViewImpl> get copyWith =>
@@ -526,11 +516,8 @@ abstract class _DbRecordView implements DbRecordView {
   @override
   @JsonKey(name: DbRecordViewField.categoryUpdatedAt)
   int? get categoryUpdatedAt;
-
-  /// Create a copy of DbRecordView
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DbRecordViewImplCopyWith<_$DbRecordViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

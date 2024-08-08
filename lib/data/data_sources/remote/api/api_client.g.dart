@@ -24,13 +24,12 @@ class _ApiClient implements ApiClient {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result = await _dio.fetch<List<dynamic>>(
-      _setStreamType<List<ApiCategory>>(
-        Options(
-          method: 'GET',
-          headers: _headers,
-          extra: _extra,
-        )
+    final _result = await _dio
+        .fetch<List<dynamic>>(_setStreamType<List<ApiCategory>>(Options(
+      method: 'GET',
+      headers: _headers,
+      extra: _extra,
+    )
             .compose(
               _dio.options,
               '/categories.json',
@@ -38,15 +37,12 @@ class _ApiClient implements ApiClient {
               data: _data,
             )
             .copyWith(
-              baseUrl: _combineBaseUrls(
-                _dio.options.baseUrl,
-                baseUrl,
-              ),
-            ),
-      ),
-    );
-    final _value = _result.data!
-        .map((i) => ApiCategory.fromJson(i as Map<String, dynamic>))
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    var _value = _result.data!
+        .map((dynamic i) => ApiCategory.fromJson(i as Map<String, dynamic>))
         .toList();
     return _value;
   }

@@ -4,6 +4,7 @@ import '../../../utilities/extensions/widget_ref_extension.dart';
 import '../../common_widgets/base/base_screen.dart';
 import '../calendar/calendar_screen.dart';
 import '../input/input_screen.dart';
+import '../report/report_screen.dart';
 import '../settings/setting_screen.dart';
 import 'home_state.dart';
 import 'home_view_model.dart';
@@ -33,7 +34,7 @@ class _HomeScreenState
     } else if (selectedTapIndex == HomeTap.calendar.index) {
       return const CalendarScreen();
     } else if (selectedTapIndex == HomeTap.report.index) {
-      return const SizedBox();
+      return const ReportScreen();
     } else if (selectedTapIndex == HomeTap.setting.index) {
       return const SettingScreen();
     } else {

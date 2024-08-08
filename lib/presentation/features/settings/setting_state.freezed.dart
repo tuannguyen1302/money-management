@@ -33,9 +33,6 @@ class _$SettingStateCopyWithImpl<$Res, $Val extends SettingState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of SettingState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -52,9 +49,6 @@ class __$$SettingStateImplCopyWithImpl<$Res>
   __$$SettingStateImplCopyWithImpl(
       _$SettingStateImpl _value, $Res Function(_$SettingStateImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of SettingState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc

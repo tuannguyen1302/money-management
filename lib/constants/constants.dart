@@ -11,4 +11,5 @@ class Constants {
   static String monthFormat = 'MMMM, yyyy';
 
   static String moneyUnit = '₫';
+  static String percent = '%';
 }
