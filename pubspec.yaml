@@ -55,7 +55,7 @@ dependencies:
   custom_sliding_segmented_control: ^1.8.1
   grouped_list: ^5.1.2
   flutter_localization: ^0.2.1
-  syncfusion_flutter_charts: ^26.2.8
+#  syncfusion_flutter_charts: ^26.2.9
 
 
 
